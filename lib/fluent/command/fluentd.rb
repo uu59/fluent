@@ -19,13 +19,13 @@
 require 'optparse'
 require 'fluent/log'
 require 'fluent/env'
+require 'fluent/supervisor'
 require 'fluent/version'
 
 op = OptionParser.new
 op.version = Fluent::VERSION
 
-# default values is defined at fluent/supervisor.rb
-opts = { }
+opts = Fluent::Supervisor::DEFAULT_OPTIONS
 
 op.on('-s', "--setup [DIR=#{File.dirname(Fluent::DEFAULT_CONFIG_PATH)}]", "install sample configuration file to the directory") {|s|
   opts[:setup_path] = s || File.dirname(Fluent::DEFAULT_CONFIG_PATH)

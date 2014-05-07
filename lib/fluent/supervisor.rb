@@ -76,7 +76,6 @@ module Fluent
     end
 
     def initialize(opt)
-      opt = DEFAULT_OPTIONS.merge(opt)
       @config_path = opt[:config_path]
       @log_path = opt[:log_path]
       @log_level = opt[:log_level]
