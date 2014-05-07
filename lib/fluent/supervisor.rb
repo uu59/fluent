@@ -17,6 +17,7 @@
 #
 
 require 'fluent/env'
+require 'fluent/log'
 
 module Fluent
   class Supervisor
